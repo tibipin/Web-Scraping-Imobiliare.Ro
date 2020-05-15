@@ -3,4 +3,4 @@ in Romania and creates pretty charts
 
 This is the output:
 
-![Alt Text](link)
+![Alt Text](https://github.com/tibipin/Web-Scraping-Imobiliare.Ro/blob/master/Imobiliare_Trim.gif)
