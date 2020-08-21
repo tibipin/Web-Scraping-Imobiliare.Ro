@@ -13,7 +13,9 @@ import os
     -> metoda getpagenumbers trimite un request catre imobiliare.ro si cate pagini de anunturi sunt 
     in variabila ultima_pagina
     
-    -> metoda extract_data trece prin fiecare pagina 
+    -> metoda extract_data trece prin fiecare pagina si extrage detaliile anunturilor
+    
+    -> metoda store data stocheaza informatiile extrase intr-un fisier .json
 """
 
 class ExtractorImobiliareRo:
