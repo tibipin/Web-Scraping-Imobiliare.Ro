@@ -6,8 +6,6 @@ import datetime
 import json
 from datetime import datetime
 
-# The test has changed
-# This beautiful interaction is part of a new branch
 class ExtractorImobiliareRo:
 
     def __init__(self, cartier, nr_camere):
