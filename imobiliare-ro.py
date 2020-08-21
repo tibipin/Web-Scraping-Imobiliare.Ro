@@ -6,7 +6,7 @@ import datetime
 import json
 from datetime import datetime
 
-# This is just a test
+# The test has changed
 class ExtractorImobiliareRo:
 
     def __init__(self, cartier, nr_camere):
