@@ -6,7 +6,7 @@ import datetime
 import json
 from datetime import datetime
 
-
+# This is just a test
 class ExtractorImobiliareRo:
 
     def __init__(self, cartier, nr_camere):
