@@ -5,6 +5,16 @@ import pandas
 import datetime
 import json
 from datetime import datetime
+import os
+
+"""
+--- Clasa ExtractorImobiliareRo C:
+    
+    -> metoda getpagenumbers trimite un request catre imobiliare.ro si cate pagini de anunturi sunt 
+    in variabila ultima_pagina
+    
+    -> metoda extract_data trece prin fiecare pagina 
+"""
 
 class ExtractorImobiliareRo:
 
@@ -20,6 +30,7 @@ class ExtractorImobiliareRo:
         self.cartier = cartier
         self.nr_camere = nr_camere
         self.home_url = f'https://www.imobiliare.ro/vanzare-apartamente/bucuresti/{self.cartier}?nrcamere={self.nr_camere}'
+        self.folderpath = f'{os.getcwd()}/.historic_data'
 
     def getpagenumbers(self):
 
@@ -81,7 +92,7 @@ class ExtractorImobiliareRo:
                                                         'Zona': self.zone[i], 'Vanzator': self.nume_vanzatori[i],
                                                         'Tip vanzator': self.tipuri_vanzatori[i]}
                                    })
-        with open(f'{datetime.date(datetime.now())}.json', 'w') as fp:
+        with open(f'{self.folderpath}/{datetime.date(datetime.now())}.json', 'w') as fp:
             json.dump(self.dictionar_root, fp)
 
 
