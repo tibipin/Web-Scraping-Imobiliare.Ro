@@ -1,3 +1,3 @@
-let's do some real estate analaytics
+let's do some real estate analytics
 
 
