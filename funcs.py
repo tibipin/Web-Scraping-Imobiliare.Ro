@@ -2,6 +2,7 @@ import json
 import re
 import pandas
 import os
+from imob_extractor import ExtractorImobiliareRo
 
 df = pandas.DataFrame()
 
@@ -42,7 +43,7 @@ def clin(dataframe):
     dataframe['pret_var']= dataframe['pret'].diff()
 
 
-for file in os.listdir():
+for file in os.listdir(ExtractorImobiliareRo.folderpath):
     if file.endswith('.json'):
         with open(file, 'r') as f:
             raw_data = json.load(f)
